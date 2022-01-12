@@ -1,0 +1,49 @@
+package Assignment6;
+
+import java.util.Scanner;
+
+public class StudentDetails {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      
+		Scanner student = new Scanner(System.in);
+		
+		System.out.print("Enter the Student Roll No : ");
+		int rno=student.nextInt();
+		System.out.print("Enter the Student Name : ");
+		String name = student.next();
+		System.out.print("Enter the Mark in Physics : ");
+		int phy = student.nextInt();
+		System.out.print("Enter the Mark in Chemistry : ");
+		int chem = student.nextInt();
+		System.out.print("Enter the Mark in Comp. App. : ");
+		int comp = student.nextInt();
+		
+		int Total = phy+chem+comp;
+		float Average = (Total/3f);
+		
+		System.out.println(" Roll No: "+" "+ rno);
+		System.out.println(" Name of student : "+name);
+		System.out.println("Marks in Physics : "+phy);
+		System.out.println("Marks in Chemistry : "+chem);
+		System.out.println("Marks in Comp.App : "+ comp);
+		System.out.println("Total Marks : "+Total);
+		System.out.println("Percentage : "+Average);
+		
+		if(Average>=80)
+		{
+			System.out.println("Division : First class");
+		}
+		else if((Average>=50)&&(Average<80))
+		{
+			System.out.println("Division : Second class");
+		}
+		else
+		{
+			System.out.println("Division : Fail");
+		}
+		
+	}
+
+}
